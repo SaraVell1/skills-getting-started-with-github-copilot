@@ -1,8 +1,7 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 body {
@@ -37,6 +36,7 @@ main {
 
 @media (min-width: 768px) {
   main {
+    display: grid;
     grid-template-columns: 2fr 1fr;
   }
 }
@@ -72,6 +72,38 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card p strong {
+  color: #1a237e;
+  font-size: 16px;
+}
+
+.activity-card ul {
+  margin-top: 10px;
+  padding: 15px;
+  list-style-type: disc; /* Ensure bullets are displayed */
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #0d47a1;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #bbdefb;
+  transition: transform 0.2s;
+  will-change: transform; /* Add this to optimize hover effect */
+}
+
+.activity-card ul li:hover {
+  transform: scale(1.05);
+  background-color: #e3f2fd;
 }
 
 .form-group {
@@ -141,4 +173,32 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+.participant-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f1f8e9;
+  border: 1px solid #c5e1a5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #33691e;
+  font-size: 14px;
+}
+
+.participant-info h5 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #558b2f;
+}
+
+.participant-info ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.participant-info ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #33691e;
 }
